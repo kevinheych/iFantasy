@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+    </dependencies>
+    <scenes>
+        <!--Status-->
+        <scene sceneID="5TY-20-nWw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Status" id="6jM-yM-JBx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Hrv-Ds-Vt1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxQ-wN-9au" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="577"/>
+        </scene>
+        <!--Team-->
+        <scene sceneID="Wsa-Ow-rC2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Team" id="XkX-EK-a5n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="egD-3V-Kua"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdJ-3q-i3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="580"/>
+        </scene>
+        <!--League-->
+        <scene sceneID="CCR-8X-LWW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="League" id="fOt-sP-Hef" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pZz-kQ-rQw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mop-Q5-gel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="581"/>
+        </scene>
+    </scenes>
+</document>
