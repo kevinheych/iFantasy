@@ -15,6 +15,10 @@
 		0A61DC7A2480F22B005464BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC762480F22B005464BD /* Main.storyboard */; };
 		0A61DC7B2480F22B005464BD /* Status.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC772480F22B005464BD /* Status.storyboard */; };
 		0A61DC7C2480F22B005464BD /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC782480F22B005464BD /* Team.storyboard */; };
+		0A61DC7E2480F2C0005464BD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC7D2480F2C0005464BD /* Login.storyboard */; };
+		0A61DC802480F431005464BD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61DC7F2480F431005464BD /* LoginVC.swift */; };
+		0A61DC832480F5FB005464BD /* RequestAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61DC822480F5FB005464BD /* RequestAuth.swift */; };
+		0AEE7BDE2481300A008EE4D9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE7BDD2481300A008EE4D9 /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0A61DC762480F22B005464BD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0A61DC772480F22B005464BD /* Status.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Status.storyboard; sourceTree = "<group>"; };
 		0A61DC782480F22B005464BD /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
+		0A61DC7D2480F2C0005464BD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0A61DC7F2480F431005464BD /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0A61DC822480F5FB005464BD /* RequestAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuth.swift; sourceTree = "<group>"; };
+		0AEE7BDD2481300A008EE4D9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,8 @@
 		0A61DC5B2480F183005464BD /* iFantasy */ = {
 			isa = PBXGroup;
 			children = (
+				0AEE7BDF24813064008EE4D9 /* Fonts */,
+				0A61DC812480F5DF005464BD /* RequestManager */,
 				0A61DC742480F1CA005464BD /* Storyboards */,
 				0A61DC732480F1C3005464BD /* Controllers */,
 				0A61DC722480F1A4005464BD /* Models */,
@@ -82,6 +92,7 @@
 		0A61DC732480F1C3005464BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A61DC7F2480F431005464BD /* LoginVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,11 +101,28 @@
 			isa = PBXGroup;
 			children = (
 				0A61DC762480F22B005464BD /* Main.storyboard */,
+				0A61DC7D2480F2C0005464BD /* Login.storyboard */,
 				0A61DC772480F22B005464BD /* Status.storyboard */,
 				0A61DC782480F22B005464BD /* Team.storyboard */,
 				0A61DC752480F22B005464BD /* League.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0A61DC812480F5DF005464BD /* RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A61DC822480F5FB005464BD /* RequestAuth.swift */,
+			);
+			path = RequestManager;
+			sourceTree = "<group>";
+		};
+		0AEE7BDF24813064008EE4D9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0AEE7BDD2481300A008EE4D9 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +185,12 @@
 			files = (
 				0A61DC6B2480F185005464BD /* LaunchScreen.storyboard in Resources */,
 				0A61DC7C2480F22B005464BD /* Team.storyboard in Resources */,
+				0A61DC7E2480F2C0005464BD /* Login.storyboard in Resources */,
 				0A61DC7A2480F22B005464BD /* Main.storyboard in Resources */,
 				0A61DC7B2480F22B005464BD /* Status.storyboard in Resources */,
 				0A61DC682480F185005464BD /* Assets.xcassets in Resources */,
 				0A61DC792480F22B005464BD /* League.storyboard in Resources */,
+				0AEE7BDE2481300A008EE4D9 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +203,8 @@
 			files = (
 				0A61DC5D2480F183005464BD /* AppDelegate.swift in Sources */,
 				0A61DC5F2480F183005464BD /* SceneDelegate.swift in Sources */,
+				0A61DC802480F431005464BD /* LoginVC.swift in Sources */,
+				0A61DC832480F5FB005464BD /* RequestAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
