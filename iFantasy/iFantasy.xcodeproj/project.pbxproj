@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A31FADA24837F90001C7D58 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A31FAD424837EE3001C7D58 /* Team.storyboard */; };
 		0A61DC5D2480F183005464BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61DC5C2480F183005464BD /* AppDelegate.swift */; };
 		0A61DC5F2480F183005464BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61DC5E2480F183005464BD /* SceneDelegate.swift */; };
 		0A61DC682480F185005464BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC672480F185005464BD /* Assets.xcassets */; };
@@ -14,14 +15,15 @@
 		0A61DC792480F22B005464BD /* League.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC752480F22B005464BD /* League.storyboard */; };
 		0A61DC7A2480F22B005464BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC762480F22B005464BD /* Main.storyboard */; };
 		0A61DC7B2480F22B005464BD /* Status.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC772480F22B005464BD /* Status.storyboard */; };
-		0A61DC7C2480F22B005464BD /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC782480F22B005464BD /* Team.storyboard */; };
-		0A61DC7E2480F2C0005464BD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A61DC7D2480F2C0005464BD /* Login.storyboard */; };
 		0A61DC802480F431005464BD /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61DC7F2480F431005464BD /* LoginVC.swift */; };
 		0A61DC832480F5FB005464BD /* RequestAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61DC822480F5FB005464BD /* RequestAuth.swift */; };
+		0AA206DE24837AB00053B262 /* TeamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA206DD24837AB00053B262 /* TeamViewCell.swift */; };
+		0AA206E024837AF00053B262 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA206DF24837AF00053B262 /* TeamViewController.swift */; };
 		0AEE7BDE2481300A008EE4D9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE7BDD2481300A008EE4D9 /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A31FAD424837EE3001C7D58 /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		0A61DC592480F183005464BD /* iFantasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFantasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A61DC5C2480F183005464BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A61DC5E2480F183005464BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,10 +33,10 @@
 		0A61DC752480F22B005464BD /* League.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = League.storyboard; sourceTree = "<group>"; };
 		0A61DC762480F22B005464BD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0A61DC772480F22B005464BD /* Status.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Status.storyboard; sourceTree = "<group>"; };
-		0A61DC782480F22B005464BD /* Team.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
-		0A61DC7D2480F2C0005464BD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0A61DC7F2480F431005464BD /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0A61DC822480F5FB005464BD /* RequestAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuth.swift; sourceTree = "<group>"; };
+		0AA206DD24837AB00053B262 /* TeamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewCell.swift; sourceTree = "<group>"; };
+		0AA206DF24837AF00053B262 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		0AEE7BDD2481300A008EE4D9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				0A61DC7F2480F431005464BD /* LoginVC.swift */,
+				0AA206DF24837AF00053B262 /* TeamViewController.swift */,
+				0AA206DD24837AB00053B262 /* TeamViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,10 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				0A61DC762480F22B005464BD /* Main.storyboard */,
-				0A61DC7D2480F2C0005464BD /* Login.storyboard */,
 				0A61DC772480F22B005464BD /* Status.storyboard */,
-				0A61DC782480F22B005464BD /* Team.storyboard */,
 				0A61DC752480F22B005464BD /* League.storyboard */,
+				0A31FAD424837EE3001C7D58 /* Team.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -184,9 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A61DC6B2480F185005464BD /* LaunchScreen.storyboard in Resources */,
-				0A61DC7C2480F22B005464BD /* Team.storyboard in Resources */,
-				0A61DC7E2480F2C0005464BD /* Login.storyboard in Resources */,
 				0A61DC7A2480F22B005464BD /* Main.storyboard in Resources */,
+				0A31FADA24837F90001C7D58 /* Team.storyboard in Resources */,
 				0A61DC7B2480F22B005464BD /* Status.storyboard in Resources */,
 				0A61DC682480F185005464BD /* Assets.xcassets in Resources */,
 				0A61DC792480F22B005464BD /* League.storyboard in Resources */,
@@ -202,7 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A61DC5D2480F183005464BD /* AppDelegate.swift in Sources */,
+				0AA206E024837AF00053B262 /* TeamViewController.swift in Sources */,
 				0A61DC5F2480F183005464BD /* SceneDelegate.swift in Sources */,
+				0AA206DE24837AB00053B262 /* TeamViewCell.swift in Sources */,
 				0A61DC802480F431005464BD /* LoginVC.swift in Sources */,
 				0A61DC832480F5FB005464BD /* RequestAuth.swift in Sources */,
 			);
