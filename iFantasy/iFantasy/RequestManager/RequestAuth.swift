@@ -35,7 +35,7 @@ class RequestAuth {
                 print(String(describing: error))
                 return
             }
-            print("Response POST: ", httpResponse)
+           
             
         }
         task.resume()

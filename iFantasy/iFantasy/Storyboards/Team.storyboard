@@ -43,7 +43,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playerCell" translatesAutoresizingMaskIntoConstraints="NO" id="VD6-1e-NaN" customClass="TeamViewCell" customModule="iFantasy" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="playerCell" translatesAutoresizingMaskIntoConstraints="NO" id="VD6-1e-NaN" customClass="TeamViewCell" customModule="iFantasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5" width="70" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q0j-Xi-Ghg">
@@ -99,6 +99,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="85V-x8-RDq" id="mXy-rm-CK0"/>
+                        <outlet property="pickerView" destination="e2V-A0-7pm" id="mJv-dD-GDX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlN-5D-xjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

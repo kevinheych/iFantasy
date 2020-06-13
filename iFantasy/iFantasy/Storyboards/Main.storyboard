@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e1e-n8-l9S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="euO-cO-rfI">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -37,11 +37,12 @@
             </objects>
             <point key="canvasLocation" x="285" y="547"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="zbC-7F-cZx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e1e-n8-l9S" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e1e-n8-l9S" customClass="MainViewController" customModule="iFantasy" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fuE-B2-NgS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bfn-Zg-GdW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -94,7 +95,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signinPressed:" destination="euO-cO-rfI" eventType="touchUpInside" id="OOi-Q7-0mB"/>
-                                    <segue destination="e1e-n8-l9S" kind="presentation" modalPresentationStyle="fullScreen" id="Gqz-99-kOr"/>
+                                    <segue destination="e1e-n8-l9S" kind="presentation" identifier="showMain" modalPresentationStyle="fullScreen" id="EKI-5M-t8g"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-s7-Qa2">
@@ -138,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N08-Ow-Va1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1050.4000000000001" y="94.902548725637189"/>
+            <point key="canvasLocation" x="-985" y="114"/>
         </scene>
     </scenes>
 </document>

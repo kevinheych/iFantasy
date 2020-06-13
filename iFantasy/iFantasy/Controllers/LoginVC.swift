@@ -32,16 +32,18 @@ class LoginVC: UIViewController {
                    return
                }
                
-               
-               let username = userTF.text
-               let password = passwordTF.text
-               
+               //change to textfield
+        let username = "kevinn_h@live.com"
+               //let password = passwordTF.text
+               let password = "k3vinheych"
                if(username == "" || password == "")
                {
                    return
                }
                
-               doLogin(username!, password!)
+               doLogin(username, password)
+                
+        performSegue(withIdentifier: "showMain", sender: self)
     }
     
     func doLogin(_ user:String, _ psw:String){

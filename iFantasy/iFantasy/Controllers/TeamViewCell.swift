@@ -11,4 +11,6 @@ import UIKit
 class TeamViewCell: UICollectionViewCell {
     
     @IBOutlet weak var myLabel: UILabel!
+    
+    
 }

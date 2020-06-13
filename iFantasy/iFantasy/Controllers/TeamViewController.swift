@@ -11,41 +11,125 @@ import UIKit
 private let reuseIdentifier = "playerCell"
 
 
-class TeamViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout {
+class TeamViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout, UIPickerViewDelegate, UIPickerViewDataSource {
+  
     
     
-    let items = ["0","1", "2", "3"]
-    let gk = ["GK1"]
-    let def = ["def1", "def2","def3","def4"]
-    let mid = ["mid1", "mid2","mid3","mid4"]
-    let fwd = ["fwd1", "fwd2"]
-    let bench = ["b1", "b2","b3", "b4"]
+    
+    var playerArray = [Player]()
+    var gk = [Player]()
+    var def = [Player]()
+    var mid = [Player]()
+    var fwd = [Player]()
+    var bench = [Player]()
+ 
     
     lazy var teamData = [gk, def, mid, fwd, bench]
     
+    var teamRequest = RequestTeam()
+    
+    @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        collectionView.delegate = self
-        //        collectionView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+         
         
         
-        //collectionView.collectionViewLayout = configureLayout()
+
+        loadTeam(userID: RequestStatus.entry_id, gw: 10)
+        
     }
     
-    func configureLayout() -> UICollectionViewCompositionalLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.22), heightDimension: .absolute(150))
+    override func viewDidAppear(_ animated: Bool) {
+        loadTeam(userID: RequestStatus.entry_id, gw: 10)
+    }
     
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: [item].count)
+    func findPlayerinData(id: Int) -> Player {
+        let allPlayers = teamRequest.allPlayerData
         
-        let section = NSCollectionLayoutSection(group: group)
+        var newPlayer = Player(id: 0, firstname: "", team: 0, teamcode: 0, type: 0, photo: "")
         
-        return UICollectionViewCompositionalLayout(section: section)
+        for element in allPlayers {
+            if element.id == id {
+             newPlayer = Player(id: element.id, firstname: element.first_name, team: element.team, teamcode: element.team_code, type: element.element_type, photo: element.photo)
+             
+            }
+           
+        }
+        return newPlayer
+    }
+    
+    
+    func loadTeam(userID: Int, gw: Int) {
+       
+        teamRequest.getTeam(userID: userID
+            , gw: gw)
+        let squad = teamRequest.currentTeam
+        
+        var array = [Player]()
+        for player in squad {
+             let playerData = findPlayerinData(id: player.element)
+            array.append(playerData)
+        }
+        playerArray = array
+        
+        
+       var gkArray = [Player]()
+        var defArray = [Player]()
+        var midArray = [Player]()
+        var fwdArray = [Player]()
+        
+        
+        for player in playerArray {
+            switch player.element_type {
+            case 1:
+                gkArray.append(player)
+            case 2:
+                defArray.append(player)
+            case 3:
+                midArray.append(player)
+            case 4:
+                fwdArray.append(player)
+            default:
+                break
+            
+            }
+        }
+        gk = gkArray
+        def = defArray
+        mid = midArray
+        fwd = fwdArray
+     
+        teamData = [gk, def, mid, fwd, bench]
+        
+        
+        print("playerArray: ", playerArray)
+        print("gk ", gk)
+        print("teamData: " , teamData)
+    }
+    
+
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+          return 1
+      }
+      
+      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+       let  count = teamRequest.total_gw_count
+        return count
+      }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(row)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -99,8 +183,8 @@ class TeamViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TeamViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = teamData[indexPath.section][indexPath.item]
-        // make cell more visible in our example project
+        cell.myLabel.text = teamData[indexPath.section][indexPath.item].first_name
+    
         
         return cell
     }
@@ -111,6 +195,11 @@ class TeamViewController: UIViewController, UICollectionViewDataSource, UICollec
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
     }
+    
+    
+    
+    
 }
+
 
 

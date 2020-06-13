@@ -10,7 +10,7 @@
         <!--Status-->
         <scene sceneID="Y1X-CW-VmS">
             <objects>
-                <viewController id="ItZ-dO-rKw" sceneMemberID="viewController">
+                <viewController id="ItZ-dO-rKw" customClass="StatusViewController" customModule="iFantasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Czm-nN-ZBw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -203,7 +203,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-Tc-WUl">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-Tc-WUl" userLabel="total players">
                                                                         <rect key="frame" x="0.0" y="80.666666666666686" width="123.33333333333333" height="20.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -292,6 +292,23 @@
                     <tabBarItem key="tabBarItem" title="Status" image="person.crop.circle.fill" catalog="system" id="89d-8I-A7d"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="700"/>
+                    <connections>
+                        <outlet property="averagePtsLabel" destination="Rxw-AD-Sc3" id="mqX-sf-Ums"/>
+                        <outlet property="chipsLabel" destination="mQf-sT-ibt" id="G0s-SF-pUT"/>
+                        <outlet property="freeTransfersLabel" destination="dXp-pT-T13" id="PXg-AI-tte"/>
+                        <outlet property="gwHeaderLabel" destination="7IN-4I-RkT" id="NbE-w6-U7o"/>
+                        <outlet property="gwPointsLabel" destination="XlB-w4-0H8" id="eTX-uC-Ewc"/>
+                        <outlet property="highestPtsLabel" destination="1Zm-mi-52r" id="RTu-WS-Hzr"/>
+                        <outlet property="itbLabel" destination="hpm-CN-Niu" id="ysh-Dn-5Ca"/>
+                        <outlet property="managerNameLabel" destination="qPu-nr-pZP" id="X4L-eN-ln4"/>
+                        <outlet property="overallPointsLabel" destination="Pg9-J0-WAi" id="gci-Pf-xdY"/>
+                        <outlet property="overallRankingLabel" destination="PE8-5n-zaK" id="fKV-Ah-07Y"/>
+                        <outlet property="scoreLabel" destination="luA-g1-dAl" id="WE9-P4-8j6"/>
+                        <outlet property="teamNameLabel" destination="6do-hd-FS3" id="7qK-1B-7dk"/>
+                        <outlet property="teamValueLabel" destination="KED-8c-cAw" id="i2s-W8-mwJ"/>
+                        <outlet property="totalPlayersLabel" destination="lW9-Tc-WUl" id="oQO-zq-S5t"/>
+                        <outlet property="transfersMadeLabel" destination="c7Y-gu-8yC" id="9vn-02-4zs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emv-Q8-7KU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
